@@ -16,7 +16,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000", // Development frontend URL
-  "https://ytcollab.vercel.app", // Production frontend URL
+  "https://yteditor.vercel.app", // Production frontend URL
 ];
 
 
