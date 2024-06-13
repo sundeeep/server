@@ -47,6 +47,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+app.get('/getName', (req, res) => {
+  res.status(200).json({ name: "Sandeep" });
+})
+
 
 const upload = multer({ dest: "uploads/" });
 
