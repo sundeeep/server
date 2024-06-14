@@ -39,7 +39,7 @@ router.post(
 router.post(
   "/:id/upload-edited",
   auth,
-  role("Editor", "Youtuber"),
+  role("Editor"),
   upload.single("video"),
   uploadEditedVideo
 );

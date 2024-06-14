@@ -19,12 +19,11 @@ const WorkspaceSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: "User",
     },
-    editors: [
+    editors: 
       {
         type: mongoose.Schema.ObjectId,
         ref: "User",
       },
-    ],
     rawVideos: [
       {
         type: mongoose.Schema.ObjectId,

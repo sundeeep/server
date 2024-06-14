@@ -110,7 +110,7 @@ exports.uploadRawVideo = asyncHandler(async (req, res, next) => {
 
 
 exports.inviteToWorkspace = asyncHandler(async (req, res, next) => {
-  const { managerId, editorIds } = req.body;
+  const { managerId, editorId } = req.body;
 
   const workspace = await Workspace.findById(req.params.id);
 
@@ -123,7 +123,7 @@ exports.inviteToWorkspace = asyncHandler(async (req, res, next) => {
   }
 
   workspace.manager = managerId;
-  workspace.editors.push(...editorIds);
+  workspace.editors=editorId;
   await workspace.save();
 
   res.status(200).json({ success: true, data: workspace });
